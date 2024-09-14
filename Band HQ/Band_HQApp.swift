@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct Band_HQApp: App {
+	@State private var currentUser = User()
+	
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			if(currentUser.appleId == ""){
+							SignInView()
+							.environment(currentUser)
+						} else {
+							HomeView()
+							.environment(currentUser)
+						}
         }
     }
 }

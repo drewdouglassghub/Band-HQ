@@ -14,6 +14,11 @@
 		318462B82C93ABD900BEBEBD /* Band_HQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462B72C93ABD900BEBEBD /* Band_HQTests.swift */; };
 		318462C22C93ABD900BEBEBD /* Band_HQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462C12C93ABD900BEBEBD /* Band_HQUITests.swift */; };
 		318462C42C93ABD900BEBEBD /* Band_HQUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462C32C93ABD900BEBEBD /* Band_HQUITestsLaunchTests.swift */; };
+		318462D12C93B0C900BEBEBD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462D02C93B0C900BEBEBD /* User.swift */; };
+		318462D32C93B0EC00BEBEBD /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462D22C93B0EC00BEBEBD /* SignInView.swift */; };
+		318462D52C93B18C00BEBEBD /* ApiFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462D42C93B18C00BEBEBD /* ApiFunctions.swift */; };
+		318462D82C93E4B400BEBEBD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 318462D72C93E4B400BEBEBD /* Alamofire */; };
+		318462DA2C93E52700BEBEBD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462D92C93E52700BEBEBD /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		318462BD2C93ABD900BEBEBD /* Band HQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Band HQUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318462C12C93ABD900BEBEBD /* Band_HQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band_HQUITests.swift; sourceTree = "<group>"; };
 		318462C32C93ABD900BEBEBD /* Band_HQUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band_HQUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		318462D02C93B0C900BEBEBD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		318462D22C93B0EC00BEBEBD /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		318462D42C93B18C00BEBEBD /* ApiFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFunctions.swift; sourceTree = "<group>"; };
+		318462D92C93E52700BEBEBD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		318462DB2C93E6C000BEBEBD /* Band HQ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Band HQ.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318462D82C93E4B400BEBEBD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,7 @@
 		3184629A2C93ABD600BEBEBD = {
 			isa = PBXGroup;
 			children = (
+				318462D92C93E52700BEBEBD /* HomeView.swift */,
 				318462A52C93ABD600BEBEBD /* Band HQ */,
 				318462B62C93ABD900BEBEBD /* Band HQTests */,
 				318462C02C93ABD900BEBEBD /* Band HQUITests */,
@@ -94,8 +106,12 @@
 		318462A52C93ABD600BEBEBD /* Band HQ */ = {
 			isa = PBXGroup;
 			children = (
+				318462DB2C93E6C000BEBEBD /* Band HQ.entitlements */,
 				318462A62C93ABD600BEBEBD /* Band_HQApp.swift */,
+				318462D22C93B0EC00BEBEBD /* SignInView.swift */,
 				318462A82C93ABD600BEBEBD /* ContentView.swift */,
+				318462D42C93B18C00BEBEBD /* ApiFunctions.swift */,
+				318462D02C93B0C900BEBEBD /* User.swift */,
 				318462AA2C93ABD800BEBEBD /* Assets.xcassets */,
 				318462AC2C93ABD800BEBEBD /* Preview Content */,
 			);
@@ -143,6 +159,9 @@
 			dependencies = (
 			);
 			name = "Band HQ";
+			packageProductDependencies = (
+				318462D72C93E4B400BEBEBD /* Alamofire */,
+			);
 			productName = "Band HQ";
 			productReference = 318462A32C93ABD600BEBEBD /* Band HQ.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 3184629A2C93ABD600BEBEBD;
+			packageReferences = (
+				318462D62C93E4B400BEBEBD /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 318462A42C93ABD600BEBEBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318462D52C93B18C00BEBEBD /* ApiFunctions.swift in Sources */,
 				318462A92C93ABD600BEBEBD /* ContentView.swift in Sources */,
 				318462A72C93ABD600BEBEBD /* Band_HQApp.swift in Sources */,
+				318462DA2C93E52700BEBEBD /* HomeView.swift in Sources */,
+				318462D32C93B0EC00BEBEBD /* SignInView.swift in Sources */,
+				318462D12C93B0C900BEBEBD /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Band HQ/Band HQ.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Band HQ/Preview Content\"";
@@ -448,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Band HQ/Band HQ.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Band HQ/Preview Content\"";
@@ -588,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		318462D62C93E4B400BEBEBD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		318462D72C93E4B400BEBEBD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 318462D62C93E4B400BEBEBD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3184629B2C93ABD600BEBEBD /* Project object */;
 }
