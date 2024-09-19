@@ -9,16 +9,24 @@ import SwiftUI
 
 @main
 struct Band_HQApp: App {
-	@State private var currentUser = User()
+	@StateObject private var currentUser = User()
+	@StateObject private var currentBand = Band()
+	
+	  init() {
+	      let currentUser = User()
+	      _currentUser = StateObject(wrappedValue: currentUser)
+	  }
 	
     var body: some Scene {
         WindowGroup {
 			if(currentUser.appleId == ""){
-							SignInView()
-							.environment(currentUser)
+				SignInView(currentUser: currentUser)
+							.environmentObject(currentUser)
+							.environmentObject(currentBand)
 						} else {
-							HomeView()
-							.environment(currentUser)
+							HomeView(currentUser: currentUser, currentBand: currentBand)
+							.environmentObject(currentUser)
+							.environmentObject(currentBand)
 						}
         }
     }

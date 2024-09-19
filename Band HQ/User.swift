@@ -1,4 +1,3 @@
-//
 //  User.swift
 //  Band HQ
 //
@@ -8,20 +7,23 @@
 import Foundation
 import SwiftUI
 
-@Observable
-class User: Codable {
+//@Observable
+class User: ObservableObject, Identifiable, Codable {
 	enum CodingKeys:String, CodingKey {
 		case _id = "_id"
 		case appleId = "appleId"
 		case firstName = "firstName"
 		case lastName =  "lastName"
 		case email = "email"
+		case bands = "bands"
 		}
-	var _id: String
-	var appleId: String
-	var firstName: String
-	var lastName: String
-	var email: String
+	
+	@Published var _id: String
+	@Published var appleId: String
+	@Published var firstName: String
+	@Published var lastName: String
+	@Published var email: String
+	@Published var bands: [Band]
 
 	init() {
 		self._id = ""
@@ -29,14 +31,16 @@ class User: Codable {
 		self.firstName = ""
 		self.lastName = ""
 		self.email = ""
+		self.bands = []
 	}
 	
-	init(_id: String, appleId: String, firstName: String, lastName: String, email: String) {
+	init(_id: String, appleId: String, firstName: String, lastName: String, email: String, bands: [Band]) {
 		self._id = _id
 		self.appleId = appleId
 		self.firstName = firstName
 		self.lastName = lastName
 		self.email = email
+		self.bands = bands
 	}
 
 		func encode(to encoder: Encoder) throws {
@@ -46,8 +50,9 @@ class User: Codable {
 			try container.encode(firstName, forKey: .firstName)
 			try container.encode(lastName, forKey: .lastName)
 			try container.encode(email, forKey: .email)
+			try container.encode(bands, forKey: .bands)
 		}
-	
+//	
 	func decode(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		_id = try container.decode(String.self, forKey: ._id)
@@ -55,8 +60,9 @@ class User: Codable {
 		firstName = try container.decode(String.self, forKey: .firstName)
 		lastName = try container.decode(String.self, forKey: .lastName)
 		email = try container.decode(String.self, forKey: .email)
+		bands = try container.decode([Band].self, forKey: .bands)
 	}
-		
+//		
 		required init(from decoder: Decoder) throws {
 			let container = try decoder.container(keyedBy: CodingKeys.self)
 			_id = try container.decode(String.self, forKey: ._id)
@@ -64,5 +70,6 @@ class User: Codable {
 			firstName = try container.decode(String.self, forKey: .firstName)
 			lastName = try container.decode(String.self, forKey: .lastName)
 			email = try container.decode(String.self, forKey: .email)
+			bands = try container.decode([Band].self, forKey: .bands)
 		}
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3163A7DE2C9B5AA3004641AC /* CreateBandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3163A7DD2C9B5AA3004641AC /* CreateBandView.swift */; };
+		3167F46A2C9BBEBE00F84186 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3167F4692C9BBEBE00F84186 /* UserListView.swift */; };
+		3167F46D2C9BCB0100F84186 /* BandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3167F46C2C9BCB0100F84186 /* BandView.swift */; };
 		318462A72C93ABD600BEBEBD /* Band_HQApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462A62C93ABD600BEBEBD /* Band_HQApp.swift */; };
 		318462A92C93ABD600BEBEBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462A82C93ABD600BEBEBD /* ContentView.swift */; };
 		318462AB2C93ABD800BEBEBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318462AA2C93ABD800BEBEBD /* Assets.xcassets */; };
@@ -19,6 +22,8 @@
 		318462D52C93B18C00BEBEBD /* ApiFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462D42C93B18C00BEBEBD /* ApiFunctions.swift */; };
 		318462D82C93E4B400BEBEBD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 318462D72C93E4B400BEBEBD /* Alamofire */; };
 		318462DA2C93E52700BEBEBD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462D92C93E52700BEBEBD /* HomeView.swift */; };
+		318462DD2C962B3F00BEBEBD /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318462DC2C962B3F00BEBEBD /* Band.swift */; };
+		31AA6CE82C9A5D0E00F32D7F /* BandListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AA6CE72C9A5D0E00F32D7F /* BandListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3163A7DD2C9B5AA3004641AC /* CreateBandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBandView.swift; sourceTree = "<group>"; };
+		3167F4692C9BBEBE00F84186 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		3167F46C2C9BCB0100F84186 /* BandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandView.swift; sourceTree = "<group>"; };
 		318462A32C93ABD600BEBEBD /* Band HQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Band HQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		318462A62C93ABD600BEBEBD /* Band_HQApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band_HQApp.swift; sourceTree = "<group>"; };
 		318462A82C93ABD600BEBEBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +62,8 @@
 		318462D42C93B18C00BEBEBD /* ApiFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFunctions.swift; sourceTree = "<group>"; };
 		318462D92C93E52700BEBEBD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		318462DB2C93E6C000BEBEBD /* Band HQ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Band HQ.entitlements"; sourceTree = "<group>"; };
+		318462DC2C962B3F00BEBEBD /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		31AA6CE72C9A5D0E00F32D7F /* BandListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3167F46B2C9BBF3A00F84186 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				318462D22C93B0EC00BEBEBD /* SignInView.swift */,
+				318462D92C93E52700BEBEBD /* HomeView.swift */,
+				31AA6CE72C9A5D0E00F32D7F /* BandListView.swift */,
+				3163A7DD2C9B5AA3004641AC /* CreateBandView.swift */,
+				318462A82C93ABD600BEBEBD /* ContentView.swift */,
+				3167F4692C9BBEBE00F84186 /* UserListView.swift */,
+				3167F46C2C9BCB0100F84186 /* BandView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3184629A2C93ABD600BEBEBD = {
 			isa = PBXGroup;
 			children = (
-				318462D92C93E52700BEBEBD /* HomeView.swift */,
 				318462A52C93ABD600BEBEBD /* Band HQ */,
 				318462B62C93ABD900BEBEBD /* Band HQTests */,
 				318462C02C93ABD900BEBEBD /* Band HQUITests */,
@@ -108,10 +131,10 @@
 			children = (
 				318462DB2C93E6C000BEBEBD /* Band HQ.entitlements */,
 				318462A62C93ABD600BEBEBD /* Band_HQApp.swift */,
-				318462D22C93B0EC00BEBEBD /* SignInView.swift */,
-				318462A82C93ABD600BEBEBD /* ContentView.swift */,
-				318462D42C93B18C00BEBEBD /* ApiFunctions.swift */,
+				3167F46B2C9BBF3A00F84186 /* Views */,
 				318462D02C93B0C900BEBEBD /* User.swift */,
+				318462DC2C962B3F00BEBEBD /* Band.swift */,
+				318462D42C93B18C00BEBEBD /* ApiFunctions.swift */,
 				318462AA2C93ABD800BEBEBD /* Assets.xcassets */,
 				318462AC2C93ABD800BEBEBD /* Preview Content */,
 			);
@@ -279,12 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3167F46D2C9BCB0100F84186 /* BandView.swift in Sources */,
 				318462D52C93B18C00BEBEBD /* ApiFunctions.swift in Sources */,
+				3167F46A2C9BBEBE00F84186 /* UserListView.swift in Sources */,
+				31AA6CE82C9A5D0E00F32D7F /* BandListView.swift in Sources */,
 				318462A92C93ABD600BEBEBD /* ContentView.swift in Sources */,
 				318462A72C93ABD600BEBEBD /* Band_HQApp.swift in Sources */,
+				3163A7DE2C9B5AA3004641AC /* CreateBandView.swift in Sources */,
 				318462DA2C93E52700BEBEBD /* HomeView.swift in Sources */,
 				318462D32C93B0EC00BEBEBD /* SignInView.swift in Sources */,
 				318462D12C93B0C900BEBEBD /* User.swift in Sources */,
+				318462DD2C962B3F00BEBEBD /* Band.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
